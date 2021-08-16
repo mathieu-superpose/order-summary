@@ -1,0 +1,124 @@
+@import 'colors';
+@import 'fonts';
+@import 'mixins';
+@import 'resets';
+
+body {
+	min-height: 100vh;
+	@include column-center;
+	justify-content: center;
+	background: $pale-blue;
+
+	@media (min-width: 768px) {
+		background-image: url("../img/pattern-background-desktop.svg");
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+	}
+}
+
+.card {
+	width: 350px;
+	height: 550px;
+	border-radius: 20px;
+	background: white;
+	// @include column-center;
+
+	&__header {
+		height: 30%;
+		background-image: url("../img/illustration-hero.svg");
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		border-radius: 20px 20px 0 0;
+	}
+	&__content {
+		padding: 1.5em;
+		@include column-center;
+		@media (min-width: 768px) {
+			padding: 1.5em 2em;
+		}
+		&__summary {
+			&__title {
+				font-size: 1.4em;
+				margin: .5em 0;
+				text-align: center;
+			}
+			&__description {
+				margin: .5em 0;
+				font-size: .8em;
+				color: grey;
+				text-align: center;
+				line-height: 1.6em;
+			}
+		}
+		&__selection {
+			width: 100%;
+			@include column-center;
+			&__card {
+				width: 100%;
+				margin: 1em 0;
+				padding: 1em;
+				background-color: $very-pale-blue;
+				border-radius: 15px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				&__musicicon {
+					height: 50px;
+					width: 50px;
+				}
+				&__details {
+					font-size: .7em;
+					margin-right: 3em;
+					&__price {
+						color: $desaturated-blue;
+					}
+				}
+				&__changebtn {
+					background: none;
+					border: none;
+					color: $bright-blue;
+					font-family: 'RedHatDisplay', sans-serif;
+					font-size: .7em;
+					font-weight: 800;
+					text-decoration: underline;
+					transition: all .1s;
+					&:hover {
+						cursor: pointer;
+						text-decoration: none;
+						opacity: .7;
+					}
+				}
+			}
+			&__proceedbtn,
+			&__cancelbtn {
+				width: 100%;
+				padding: 1em;
+				border: none;
+				border-radius: 10px;
+				margin: .5em 0;
+				font-family: 'RedHatDisplay', sans-serif;
+				font-size: .7em;
+				font-weight: 800;
+				transition: all .2s;
+				&:hover {
+					cursor: pointer;
+				}
+			}
+			&__proceedbtn {
+				background: $bright-blue;
+				color: white;
+				&:hover {
+					opacity: .7;
+					filter: drop-shadow(0px 5px 5px $bright-blue);
+				}
+			}
+			&__cancelbtn {
+				background: inherit;
+				color: $desaturated-blue;
+				&:hover {
+					color: $dark-blue;
+				}
+			}
+		}
+	}	
+}

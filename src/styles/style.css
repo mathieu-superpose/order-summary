@@ -1,0 +1,127 @@
+@font-face {
+  font-family: "RedHatDisplay";
+  src: url("../fonts/red_hat_display/RedHatDisplay-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+@font-face {
+  font-family: "RedHatDisplay";
+  src: url("../fonts/red_hat_display/RedHatDisplay-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: "RedHatDisplay";
+  src: url("../fonts/red_hat_display/RedHatDisplay-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'RedHatDisplay', sans-serif;
+  font-size: 16px;
+  font-weight: 500; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #e0e8ff; }
+  @media (min-width: 768px) {
+    body {
+      background-image: url("../img/pattern-background-desktop.svg");
+      background-repeat: no-repeat;
+      background-size: 100% auto; } }
+
+.card {
+  width: 350px;
+  height: 550px;
+  border-radius: 20px;
+  background: white; }
+  .card__header {
+    height: 30%;
+    background-image: url("../img/illustration-hero.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    border-radius: 20px 20px 0 0; }
+  .card__content {
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    @media (min-width: 768px) {
+      .card__content {
+        padding: 1.5em 2em; } }
+    .card__content__summary__title {
+      font-size: 1.4em;
+      margin: .5em 0;
+      text-align: center; }
+    .card__content__summary__description {
+      margin: .5em 0;
+      font-size: .8em;
+      color: grey;
+      text-align: center;
+      line-height: 1.6em; }
+    .card__content__selection {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .card__content__selection__card {
+        width: 100%;
+        margin: 1em 0;
+        padding: 1em;
+        background-color: #f5f7ff;
+        border-radius: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        .card__content__selection__card__musicicon {
+          height: 50px;
+          width: 50px; }
+        .card__content__selection__card__details {
+          font-size: .7em;
+          margin-right: 3em; }
+          .card__content__selection__card__details__price {
+            color: #7280a7; }
+        .card__content__selection__card__changebtn {
+          background: none;
+          border: none;
+          color: #3829e0;
+          font-family: 'RedHatDisplay', sans-serif;
+          font-size: .7em;
+          font-weight: 800;
+          text-decoration: underline;
+          transition: all .1s; }
+          .card__content__selection__card__changebtn:hover {
+            cursor: pointer;
+            text-decoration: none;
+            opacity: .7; }
+      .card__content__selection__proceedbtn, .card__content__selection__cancelbtn {
+        width: 100%;
+        padding: 1em;
+        border: none;
+        border-radius: 10px;
+        margin: .5em 0;
+        font-family: 'RedHatDisplay', sans-serif;
+        font-size: .7em;
+        font-weight: 800;
+        transition: all .2s; }
+        .card__content__selection__proceedbtn:hover, .card__content__selection__cancelbtn:hover {
+          cursor: pointer; }
+      .card__content__selection__proceedbtn {
+        background: #3829e0;
+        color: white; }
+        .card__content__selection__proceedbtn:hover {
+          opacity: .7;
+          filter: drop-shadow(0px 5px 5px #3829e0); }
+      .card__content__selection__cancelbtn {
+        background: inherit;
+        color: #7280a7; }
+        .card__content__selection__cancelbtn:hover {
+          color: #1f2f56; }
+
+/*# sourceMappingURL=style.css.map */
